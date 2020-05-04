@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Lakey">
+</Property><Property Name="Solution File" Value="\\psf\Home\Documents\Visual Studio 2010\Projects\lakey\Lakey.sln">
+</Property><Property Name="Date" Value="2012年6月3日">
+</Property><Property Name="Time" Value="16:44:36">
+</Property><Property Name="Log Number" Value="3">
+</Property></Properties><Event ErrorLevel="0" Project="Lakey" Source="Lakey.vcproj" Description="Converting project file '\\psf\Home\Documents\Visual Studio 2010\Projects\lakey\Lakey.vcproj'.">
+</Event><Event ErrorLevel="1" Project="Lakey" Source="Lakey.vcproj" Description="This application has been updated to include settings related to the User Account Control (UAC) feature of Windows Vista. By default, when run on Windows Vista with UAC enabled, this application is marked to run with the same privileges as the process that launched it. This marking also disables the application from running with virtualization. You can change UAC related settings from the Property Pages of the project.">
+</Event><Event ErrorLevel="1" Project="Lakey" Source="Lakey.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="Lakey" Source="Lakey.vcproj" Description="Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.">
+</Event><Event ErrorLevel="0" Project="Lakey" Source="Lakey.vcproj" Description="Web deployment to the local IIS server is no longer supported. The Web Deployment build tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="Lakey" Source="Lakey.vcproj" Description="Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.">
+</Event><Event ErrorLevel="0" Project="Lakey" Source="Lakey.vcproj" Description="Done converting to new project file '\\psf\Home\Documents\Visual Studio 2010\Projects\lakey\Lakey.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="Lakey" Source="Lakey.vcproj" Description="Converted">
+</Event></UpgradeLog>

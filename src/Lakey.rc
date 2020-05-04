@@ -1,0 +1,473 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_LAKEY               ICON                    "Lakey.ico"
+IDI_SMALL               ICON                    "small.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDC_LAKEY MENU 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "退出(&X)",                      IDM_EXIT
+    END
+    POPUP "工具(&T)"
+    BEGIN
+        MENUITEM "生成CW音频文件(&W)",                IDM_PROMPTWAVE
+        MENUITEM SEPARATOR
+        MENUITEM "Koch训练法\tCtrl+K",             IDM_KOCHSTART
+        MENUITEM "生成Koch音频文件(&G)",              IDM_KOCHWAVE
+        MENUITEM SEPARATOR
+        MENUITEM "发送训练(&T)",              IDM_SENDTRAINING
+        MENUITEM SEPARATOR
+        MENUITEM "设置(&S)",                      IDM_SETTINGS
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "关于(&A)...",                   IDM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_LAKEY ACCELERATORS 
+BEGIN
+    "/",            IDM_ABOUT,              ASCII,  ALT, NOINVERT
+    "?",            IDM_ABOUT,              ASCII,  ALT, NOINVERT
+    "K",            IDM_KOCHSTART,          VIRTKEY, CONTROL, NOINVERT
+    VK_ESCAPE,      IDM_KOCHSTOP,           VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 22, 17, 215, 73
+STYLE DS_SETFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "关于Lakey"
+FONT 9, "Arial", 400, 0, 0x0
+BEGIN
+    CONTROL         131,IDC_MYICON,"Static",SS_BITMAP | SS_REALSIZEIMAGE | WS_BORDER,5,7,62,51
+    LTEXT           "Lakey         Version 2.1.0019 (Pencil)",IDC_STATIC,76,6,129,8,SS_NOPREFIX
+    LTEXT           "Copyright www.lakey.cn (C) 2006-2012",IDC_STATIC,76,16,129,8
+    LTEXT           "DE BG1VLZ, idirect3d@hotmail.com, VY",IDC_STATIC,76,38,132,8
+    LTEXT           "-.-. --.- -.-. --.- -.-. --.- -.-. --.- -.-. --.- -.-. --.- -.-. --.- -.-. --.- -.-. --.- -.-. --.-",IDC_STATIC,6,63,203,8
+    LTEXT           "73 ^_^",IDC_STATIC,76,49,132,8
+END
+
+IDD_PROMPTBOX DIALOGEX 22, 17, 215, 73
+STYLE DS_SETFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "输入框"
+FONT 9, "Arial", 400, 0, 0x0
+BEGIN
+    LTEXT           "请输入: ",IDC_PROMPTTEXT,7,10,200,8
+    EDITTEXT        IDC_INPUTSTR,7,33,200,12,ES_UPPERCASE | ES_AUTOHSCROLL | ES_WANTRETURN
+    PUSHBUTTON      "提交",IDOK,155,56,47,10
+    PUSHBUTTON      "取消",IDCANCEL,100,56,47,10
+END
+
+IDD_SETTINGS DIALOGEX 22, 17, 254, 194
+STYLE DS_SETFONT | DS_3DLOOK | DS_FIXEDSYS | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Settings"
+FONT 9, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_SETTINGSTAB,"SysTabControl32",0x0,2,3,249,170
+    PUSHBUTTON      "确定",IDC_ACCEPT,190,178,47,12
+    PUSHBUTTON      "取消",IDCANCEL,135,178,47,12
+END
+
+IDD_COPYPAD DIALOGEX 0, 0, 343, 199
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST | WS_EX_TOOLWINDOW
+CAPTION "抄报栏"
+FONT 8, "Courier New", 400, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_COPYTEXT,"RichEdit20A",ES_MULTILINE | ES_NUMBER | WS_BORDER | WS_VSCROLL | WS_TABSTOP,0,0,342,175
+    DEFPUSHBUTTON   "完成",IDC_ACCEPT,277,181,55,12
+    LTEXT           "00:00:00",IDC_ELAPSETIME,9,184,37,10
+    RTEXT           "0",IDC_COPIED,59,184,37,10
+    RTEXT           "0",IDC_INCORRECT,109,184,37,10
+    RTEXT           "0%",IDC_CORRECTPERC,159,184,37,10
+    GROUPBOX        "用时",IDC_STATIC,3,176,47,21
+    GROUPBOX        "抄录",IDC_STATIC,53,176,47,21
+    GROUPBOX        "错码",IDC_STATIC,103,176,47,21
+    GROUPBOX        "正确率",IDC_STATIC,153,176,47,21
+END
+
+IDD_TEST DIALOGEX 0, 0, 348, 148
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,291,7,50,14
+    PUSHBUTTON      "取消",IDCANCEL,291,24,50,14
+    CONTROL         "",IDC_RICHEDIT21,"RichEdit20A",ES_AUTOHSCROLL | WS_BORDER | WS_TABSTOP,7,7,180,134
+END
+
+IDD_GENERAL DIALOGEX 0, 0, 284, 163
+STYLE DS_SETFONT | DS_SETFOREGROUND | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_SHORTHIT,42,14,29,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_HITDELAY,137,14,29,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_SPEED,218,14,29,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_LONGHIT,42,32,29,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_LETTERDELAY,137,32,29,14,ES_AUTOHSCROLL | ES_NUMBER
+    PUSHBUTTON      "计算键速",IDC_CALCSPEED,199,33,77,12
+    GROUPBOX        "CW规则",IDC_STATIC,4,2,276,52
+    LTEXT           """嘀""声长",IDC_STATIC,8,17,35,9
+    LTEXT           "(ms)",IDC_STATIC,76,17,19,9
+    LTEXT           """嗒""声长",IDC_STATIC,8,35,35,9
+    LTEXT           "(ms)",IDC_STATIC,76,35,19,9
+    LTEXT           "键击间隔",IDC_STATIC,103,17,35,9
+    LTEXT           "(ms)",IDC_STATIC,171,35,19,9
+    LTEXT           "字符间隔",IDC_STATIC,103,35,35,9
+    LTEXT           "(ms)",IDC_STATIC,171,17,19,9
+    LTEXT           "键速",IDC_STATIC,199,17,18,9
+    LTEXT           "(wpm)",IDC_STATIC,252,17,23,9
+    LTEXT           "通常在“键速”栏录入想要的键速（WPM值）即可，其他参数将自动计算。如果微调了除“键速”以外的参数，可以通过点击“计算键速”按钮来反算当前键速值。",IDC_STATIC,19,70,244,33
+END
+
+IDD_SEND DIALOGEX 0, 0, 284, 163
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_BEEPFREQ,49,14,53,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BEEPVOL,49,32,53,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SENDPERIOD,49,50,53,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_SENDILDELIMIT,184,14,53,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_CW,184,32,53,14,ES_AUTOHSCROLL | ES_WANTRETURN | ES_NUMBER
+    EDITTEXT        IDC_WORDDELAY,184,50,53,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "这里设定的是和发报相关的参数。",IDC_STATIC,26,78,237,33
+    GROUPBOX        "发送",IDC_STATIC,4,2,276,68
+    LTEXT           "音调",IDC_STATIC,10,17,20,9
+    LTEXT           "(Hz)",IDC_STATIC,107,17,17,9
+    LTEXT           "音量",IDC_STATIC,10,35,20,9
+    LTEXT           "0~1.0",IDC_STATIC,106,35,22,9
+    LTEXT           "采样间隔",IDC_STATIC,9,53,35,9
+    LTEXT           "(ms)",IDC_STATIC,107,53,19,9
+    LTEXT           "空闲停止",IDC_STATIC,144,16,35,9
+    LTEXT           "(ms)",IDC_STATIC,242,16,19,9
+    LTEXT           "CW键",IDC_STATIC,144,35,35,9
+    LTEXT           "VK code",IDC_STATIC,242,35,31,9
+    LTEXT           "空格延迟",IDC_STATIC,144,53,35,9
+    LTEXT           "(ms)",IDC_STATIC,242,53,19,9
+END
+
+IDD_RECV DIALOGEX 0, 0, 284, 163
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_RECVANALYZESAMPLES,49,14,53,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_RECVPERIOD,49,32,53,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_RECVILDELIMIT,49,50,53,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_RECVTHRESHOLD,184,14,53,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_RECVFREQSTART,184,32,53,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_RECVFREQEND,184,50,53,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "这里设定的是和收报相关的参数。",IDC_STATIC,26,78,237,33
+    GROUPBOX        "接收",IDC_STATIC,4,2,276,69
+    LTEXT           "采样数量",IDC_STATIC,9,17,35,9
+    LTEXT           "(点)",IDC_STATIC,107,17,14,9
+    LTEXT           "采样间隔",IDC_STATIC,9,35,35,9
+    LTEXT           "(ms)",IDC_STATIC,107,35,19,9
+    LTEXT           "空闲停止",IDC_STATIC,9,53,35,9
+    LTEXT           "(ms)",IDC_STATIC,107,53,19,9
+    LTEXT           "阀值电平",IDC_STATIC,144,17,35,9
+    LTEXT           "0~1.0",IDC_STATIC,242,17,22,9
+    LTEXT           "起始频率",IDC_STATIC,144,35,35,9
+    LTEXT           "(Hz)",IDC_STATIC,242,35,17,9
+    LTEXT           "截止频率",IDC_STATIC,144,53,35,9
+    LTEXT           "(Hz)",IDC_STATIC,242,53,17,9
+END
+
+IDD_IO DIALOGEX 0, 0, 284, 163
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "启用",IDC_EXTPORTENABLE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,16,37,9
+    EDITTEXT        IDC_EXTPORTADDR,99,14,37,14,ES_UPPERCASE | ES_READONLY
+    EDITTEXT        IDC_OPENBYTE,188,14,15,14,ES_UPPERCASE
+    EDITTEXT        IDC_CLOSEBYTE,251,14,15,14,ES_UPPERCASE
+    LTEXT           "当按下或抬起CW键时，Lakey可以向指定的硬件端口地址发送特定的数据，以便控制一些外围设备。",IDC_STATIC,20,44,244,22
+    GROUPBOX        "端口控制",IDC_STATIC,4,2,276,32
+    LTEXT           "地址(HEX)",IDC_STATIC,59,16,37,9
+    LTEXT           "开启(HEX)",IDC_STATIC,146,16,37,9
+    LTEXT           "关闭(HEX)",IDC_STATIC,211,16,37,9
+    LTEXT           "注意：不正确的硬件地址设定，有可能会干扰计算机中一些硬件正常工作或导致操作系统工作异常，请谨慎修改！",IDC_STATIC,19,90,244,25,WS_BORDER
+    LTEXT           "(常用端口地址参考值：并口 - 278H/378H；串口 - 3E8H/3F8H/2F8H)",IDC_STATIC,25,70,237,16
+END
+
+IDD_KOCH DIALOGEX 0, 0, 284, 163
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_KOCHCHARS,49,14,223,14,ES_UPPERCASE | ES_AUTOHSCROLL | ES_WANTRETURN
+    EDITTEXT        IDC_KOCHWORDLEN,49,32,25,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "在“字符集”中输入KOCH训练过程中要进行训练的字母；训练时程序将随机选取字符集中的字符进行训练。每播放“字长度”个字符后用一个“空格”（一个嗒音长度）停顿。",IDC_STATIC,22,67,246,35
+    GROUPBOX        "练习",IDC_STATIC,4,2,276,55
+    LTEXT           "字符集",IDC_STATIC,9,17,31,9
+    LTEXT           "字长度",IDC_STATIC,9,35,32,9
+    LTEXT           "Koch字符集（建议顺序）：\n\nK M R S U A P T L O W I . N J E F 0 Y , V G 5 / Q 9 Z H 3 8 B ? 4 2 7 C 1 D 6 X <BT> <SK> <AR>",IDC_STATIC,22,108,245,36
+END
+
+IDD_NETWORK DIALOGEX 0, 0, 284, 163
+STYLE DS_SETFONT | DS_3DLOOK | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE
+EXSTYLE WS_EX_TRANSPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "启用网络",IDC_NWENABLED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,227,15,48,10
+    EDITTEXT        IDC_HOSTNAME,51,44,79,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "添加",IDC_HOSTADD,197,44,35,13,BS_FLAT
+    PUSHBUTTON      "删除",IDC_HOSTDEL,238,44,35,13
+    CONTROL         "",IDC_HOSTLIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_EDITLABELS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,10,62,263,62
+    EDITTEXT        IDC_LOCALPORT,51,14,30,14,ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+    EDITTEXT        IDC_HOSTPORT,158,44,29,14,ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+    GROUPBOX        "网络参数",IDC_STATIC,4,2,276,127
+    LTEXT           "本地端口",IDC_STATIC,11,17,32,9
+    LTEXT           "在节点表中可以增加静态主机地址、局域网广播地址、主机域名等。",IDC_STATIC,17,135,243,13
+    LTEXT           "端口",IDC_STATIC,137,47,21,9
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,10,36,265,1
+    LTEXT           "主机 - IP",IDC_STATIC,11,47,31,9
+END
+
+IDD_SETTINGS2 DIALOGEX 22, 17, 243, 242
+STYLE DS_SETFONT | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Settings"
+FONT 9, "Arial", 400, 0, 0x0
+BEGIN
+    GROUPBOX        "发送",IDC_STATIC,3,3,117,105
+    LTEXT           "音调",IDC_STATIC,7,17,17,8
+    EDITTEXT        IDC_BEEPFREQ,41,15,45,12,ES_AUTOHSCROLL
+    LTEXT           "(Hz)",IDC_STATIC,90,17,15,8
+    LTEXT           "音量",IDC_STATIC,7,32,17,8
+    EDITTEXT        IDC_BEEPVOL,41,30,45,12,ES_AUTOHSCROLL
+    LTEXT           "0~1.0",IDC_STATIC,90,32,19,8
+    LTEXT           "采样间隔",IDC_STATIC,7,47,30,8
+    EDITTEXT        IDC_SENDPERIOD,41,45,45,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "(ms)",IDC_STATIC,91,47,16,8
+    LTEXT           "空闲停止",IDC_STATIC,7,62,30,8
+    EDITTEXT        IDC_SENDILDELIMIT,41,60,45,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "(ms)",IDC_STATIC,91,62,16,8
+    LTEXT           "CW键",IDC_STATIC,7,77,30,8
+    EDITTEXT        IDC_CW,41,75,45,12,ES_AUTOHSCROLL | ES_WANTRETURN | ES_NUMBER
+    LTEXT           "VK code",IDC_STATIC,91,77,27,8
+    LTEXT           "空格延迟",IDC_STATIC,7,92,30,8
+    EDITTEXT        IDC_WORDDELAY,41,90,45,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "(ms)",IDC_STATIC,91,92,16,8
+    GROUPBOX        "接收",IDC_STATIC,125,3,115,105
+    LTEXT           "采样数量",IDC_STATIC,132,17,30,8
+    EDITTEXT        IDC_RECVANALYZESAMPLES,166,15,45,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "(点)",IDC_STATIC,216,17,12,8
+    LTEXT           "采样间隔",IDC_STATIC,132,32,30,8
+    EDITTEXT        IDC_RECVPERIOD,166,30,45,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "(ms)",IDC_STATIC,216,32,16,8
+    LTEXT           "空闲停止",IDC_STATIC,132,47,30,8
+    EDITTEXT        IDC_RECVILDELIMIT,166,45,45,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "(ms)",IDC_STATIC,216,47,16,8
+    LTEXT           "阀值电平",IDC_STATIC,132,62,30,8
+    EDITTEXT        IDC_RECVTHRESHOLD,166,60,45,12,ES_AUTOHSCROLL
+    LTEXT           "0~1.0",IDC_STATIC,216,62,19,8
+    LTEXT           "起始频率",IDC_STATIC,132,77,30,8
+    EDITTEXT        IDC_RECVFREQSTART,166,75,45,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "(Hz)",IDC_STATIC,216,77,14,8
+    LTEXT           "截止频率",IDC_STATIC,132,92,30,8
+    EDITTEXT        IDC_RECVFREQEND,166,90,45,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "(Hz)",IDC_STATIC,216,92,14,8
+    GROUPBOX        "CW规则",IDC_STATIC,3,110,237,45
+    LTEXT           """嘀""声长",IDC_STATIC,7,122,30,8
+    EDITTEXT        IDC_SHORTHIT,36,120,25,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "(ms)",IDC_STATIC,65,122,16,8
+    LTEXT           """嗒""声长",IDC_STATIC,7,136,30,8
+    EDITTEXT        IDC_LONGHIT,36,135,25,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "(ms)",IDC_STATIC,65,136,16,8
+    LTEXT           "键击间隔",IDC_STATIC,88,121,30,8
+    EDITTEXT        IDC_HITDELAY,117,120,25,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "(ms)",IDC_STATIC,147,136,16,8
+    LTEXT           "字符间隔",IDC_STATIC,88,136,30,8
+    EDITTEXT        IDC_LETTERDELAY,117,135,25,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "(ms)",IDC_STATIC,147,121,16,8
+    LTEXT           "键速",IDC_STATIC,170,121,30,8
+    EDITTEXT        IDC_SPEED,187,120,25,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "(wpm)",IDC_STATIC,216,121,20,8
+    PUSHBUTTON      "计算键速",IDC_CALCSPEED,170,136,66,10
+    GROUPBOX        "端口控制",IDC_STATIC,3,156,237,28
+    CONTROL         "启用",IDC_EXTPORTENABLE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,168,32,8
+    LTEXT           "地址(HEX)",IDC_STATIC,51,168,32,8
+    EDITTEXT        IDC_EXTPORTADDR,85,166,32,12,ES_UPPERCASE | ES_READONLY
+    LTEXT           "开启(HEX)",IDC_STATIC,125,168,32,8
+    EDITTEXT        IDC_OPENBYTE,161,166,13,12,ES_UPPERCASE
+    LTEXT           "关闭(HEX)",IDC_STATIC,181,168,32,8
+    EDITTEXT        IDC_CLOSEBYTE,215,166,13,12,ES_UPPERCASE
+    GROUPBOX        "练习",IDC_STATIC,3,190,237,28
+    LTEXT           "字符集",IDC_STATIC,7,202,32,8
+    EDITTEXT        IDC_KOCHCHARS,41,200,138,12,ES_UPPERCASE | ES_AUTOHSCROLL | ES_WANTRETURN
+    LTEXT           "字长度",IDC_STATIC,186,202,32,8
+    EDITTEXT        IDC_KOCHWORDLEN,215,200,16,12,ES_AUTOHSCROLL | ES_NUMBER
+    PUSHBUTTON      "确定",IDC_ACCEPT,190,224,47,10
+    PUSHBUTTON      "取消",IDCANCEL,135,224,47,10
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        RIGHTMARGIN, 213
+        BOTTOMMARGIN, 72
+    END
+
+    IDD_SETTINGS, DIALOG
+    BEGIN
+        RIGHTMARGIN, 251
+    END
+
+    IDD_TEST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 341
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 141
+    END
+
+    IDD_GENERAL, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 161
+    END
+
+    IDD_SEND, DIALOG
+    BEGIN
+        RIGHTMARGIN, 280
+        BOTTOMMARGIN, 160
+    END
+
+    IDD_RECV, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 122
+    END
+
+    IDD_IO, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 122
+    END
+
+    IDD_KOCH, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 152
+    END
+
+    IDD_NETWORK, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 152
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_LOGO                BITMAP                  "logo.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_APP_TITLE           "Lakey 2.1 (Pencil)"
+    IDC_LAKEY               "LAKEY"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

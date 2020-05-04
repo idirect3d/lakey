@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4afbbfc2-bf6b-49a7-ac06-2381afa2f2cc}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{8e69d1d8-f0fa-4505-afa8-68c0163cbf89}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{61be6223-e008-4882-b33e-1feda47e14f1}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CommFunc.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="EventListener.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="EventManagerWin32.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FFT.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LaButton.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LaHwControl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LaJournalPanel.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LakeyMain.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LakeyMainWindow.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LakeySetting.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LaLabel.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LaLine.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LaNetwork.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LaTuner.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LaWaveCapture.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LaWaveFile.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MorseParser.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mytest.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SinSound.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LaSpectrogram.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CommFunc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="EventListener.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="EventManagerWin32.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FFT.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LaButton.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LaHwControl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LaJournalPanel.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Lakey.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LakeyMainWindow.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LakeySetting.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LaLabel.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LaLine.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LaNetwork.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LaTuner.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LaWaveCapture.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LaWaveFile.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MorseParser.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mytest.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SinSound.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LaSpectrogram.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Lakey.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="lakey.ini">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="logo.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="mc.txt">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="small.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="ReadMe.txt" />
+    <None Include="..\MANUAL\index.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Lakey.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
