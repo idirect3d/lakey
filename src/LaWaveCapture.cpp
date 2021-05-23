@@ -289,6 +289,10 @@ BOOL CLaWaveCapture::OnPaint(void* owner, CGraphics* g, const RECT* pRect)
 int CLaWaveCapture::AnalyzeData()
 {
 	DWORD nStatus = 0;
+
+	if (!m_pDsCapBuff)
+		return -1;
+
 	m_pDsCapBuff->GetStatus(&nStatus);
 	if (!((DSCBSTATUS_CAPTURING & nStatus) && (DSCBSTATUS_LOOPING & nStatus)))
 		return -1;

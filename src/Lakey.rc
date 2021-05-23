@@ -15,13 +15,11 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// Chinese (P.R.C.) resources
+// 中文(简体，中国) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
-#ifdef _WIN32
 LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
 #pragma code_page(936)
-#endif //_WIN32
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -31,14 +29,16 @@ LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
 IDI_LAKEY               ICON                    "Lakey.ico"
+
 IDI_SMALL               ICON                    "small.ico"
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
 // Menu
 //
 
-IDC_LAKEY MENU 
+IDC_LAKEY MENU
 BEGIN
     POPUP "文件(&F)"
     BEGIN
@@ -51,7 +51,7 @@ BEGIN
         MENUITEM "Koch训练法\tCtrl+K",             IDM_KOCHSTART
         MENUITEM "生成Koch音频文件(&G)",              IDM_KOCHWAVE
         MENUITEM SEPARATOR
-        MENUITEM "发送训练(&T)",              IDM_SENDTRAINING
+        MENUITEM "发送训练(&T)",                    IDM_SENDTRAINING
         MENUITEM SEPARATOR
         MENUITEM "设置(&S)",                      IDM_SETTINGS
     END
@@ -67,7 +67,7 @@ END
 // Accelerator
 //
 
-IDC_LAKEY ACCELERATORS 
+IDC_LAKEY ACCELERATORS
 BEGIN
     "/",            IDM_ABOUT,              ASCII,  ALT, NOINVERT
     "?",            IDM_ABOUT,              ASCII,  ALT, NOINVERT
@@ -86,9 +86,9 @@ STYLE DS_SETFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
 CAPTION "关于Lakey"
 FONT 9, "Arial", 400, 0, 0x0
 BEGIN
-    CONTROL         131,IDC_MYICON,"Static",SS_BITMAP | SS_REALSIZEIMAGE | WS_BORDER,5,7,62,51
-    LTEXT           "Lakey         Version 2.1.0019 (Pencil)",IDC_STATIC,76,6,129,8,SS_NOPREFIX
-    LTEXT           "Copyright www.lakey.cn (C) 2006-2012",IDC_STATIC,76,16,129,8
+    CONTROL         IDB_BITMAP1,IDC_MYICON,"Static",SS_BITMAP | SS_REALSIZEIMAGE | WS_BORDER,5,7,62,51
+    LTEXT           "Lakey Version 2.2.0020 (Paper)",IDC_STATIC,76,6,129,8,SS_NOPREFIX
+    LTEXT           "(C) 2006-2020",IDC_STATIC,76,16,129,8
     LTEXT           "DE BG1VLZ, idirect3d@hotmail.com, VY",IDC_STATIC,76,38,132,8
     LTEXT           "-.-. --.- -.-. --.- -.-. --.- -.-. --.- -.-. --.- -.-. --.- -.-. --.- -.-. --.- -.-. --.- -.-. --.-",IDC_STATIC,6,63,203,8
     LTEXT           "73 ^_^",IDC_STATIC,76,49,132,8
@@ -383,7 +383,7 @@ END
 //
 
 #ifdef APSTUDIO_INVOKED
-GUIDELINES DESIGNINFO 
+GUIDELINES DESIGNINFO
 BEGIN
     IDD_ABOUTBOX, DIALOG
     BEGIN
@@ -445,18 +445,19 @@ END
 
 IDB_LOGO                BITMAP                  "logo.bmp"
 
+
 /////////////////////////////////////////////////////////////////////////////
 //
 // String Table
 //
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
-    IDS_APP_TITLE           "Lakey 2.1 (Pencil)"
+    IDS_APP_TITLE           "Lakey 2.2 (Paper)"
     IDC_LAKEY               "LAKEY"
 END
 
-#endif    // Chinese (P.R.C.) resources
+#endif    // 中文(简体，中国) resources
 /////////////////////////////////////////////////////////////////////////////
 
 

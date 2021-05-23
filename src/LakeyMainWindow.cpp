@@ -123,12 +123,12 @@ CLakeyMainWindow::CLakeyMainWindow(HWND hWnd, CLakeySetting* pSetting)
 	r.bottom -= r.top + 20;
 	r.left = r.right - 80;
 	r.top = r.bottom - 20;
-	m_pLogo = CreateLabel(&r, "Lakey ", &m_oLogoStyle);
+	// m_pLogo = CreateLabel(&r, "Lakey ", &m_oLogoStyle);
 
 	r.top += 20;
 	r.bottom += 16;
 	r.right -= 10;
-	m_pVersion = CreateLabel(&r, "b0019", &m_oVersionStyle);
+	// m_pVersion = CreateLabel(&r, "b0019", &m_oVersionStyle);
 
 	m_pSound = new CSinSound();
 	m_pSound->SetFrequency((float)m_pSetting->cust.m_rBeepFreq);
@@ -170,8 +170,8 @@ CLakeyMainWindow::~CLakeyMainWindow(void)
 	m_pSetting->cust.m_oSendSpeedTuner.v = this->m_pTnSendSpeed->GetScale();
 	m_pSetting->cust.m_oSpecBrightnessTuner.v = this->m_pTnSpecBrightness->GetScale();
 
-	delete m_pVersion;
-	delete m_pLogo;
+	// delete m_pVersion;
+	// delete m_pLogo;
 	delete m_pTnSpecBrightness;
 	delete m_pTnSendSpeed;
 	delete m_pTnBgVol;
@@ -208,9 +208,9 @@ void CLakeyMainWindow::BuildMorseButtons()
 	int x = 10;
 	int oy = 300;
 	int y = oy;
-	int nMaxY = r.bottom - r.top - 58;
 	int h = 12;
 	int w = 58;
+	int nMaxY = r.bottom - r.top - 6 * h;
 	char txt[] = { ' ', ' ', ' ', ' ', ' ', '#', '#', '#', '#', '#', '#', '\0' };
 
 	for (int i = 0; i < MORSECODECOUNT; ++i)

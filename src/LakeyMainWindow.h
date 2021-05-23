@@ -138,8 +138,8 @@ private:
 	CLaLabel*			m_pSendLabel;
 	CLaLabel*			m_pRecvLabel;
 
-	CLaLabel*			m_pLogo;
-	CLaLabel*			m_pVersion;
+	// CLaLabel*			m_pLogo;
+	// CLaLabel*			m_pVersion;
 
 	// CW Flag
 	BOOL		m_bCwFlag;

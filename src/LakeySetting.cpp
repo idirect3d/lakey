@@ -22,7 +22,7 @@ CLakeySetting::CLakeySetting(void)
 	cust.m_nLetterDelay = 240;
 	cust.m_nWordDelay = 240;
 
-	SetRect(&cust.m_oWindowRect, 0, 0, 920, 436);
+	SetRect(&cust.m_oWindowRect, 0, 0, 936, 450);
 
 	cust.m_nSendJournalPeriod = 27;
 	SetRect(&cust.m_oSendJournalRect, 5,235,490,267);
@@ -50,7 +50,7 @@ CLakeySetting::CLakeySetting(void)
 	cust.m_nRecvFreqStart = 850;
 	cust.m_nRecvFreqEnd = 1250;
 
-	SetButtonMapping(cust.m_oCwKeyButton, 500,290,297,92, VK_RETURN, "CW");
+	SetButtonMapping(cust.m_oCwKeyButton, 500,290,400,92, VK_RETURN, "CW");
 	SetButtonMapping(cust.m_oSendFileButton, 500,265,91,16, VK_F6, "File...");
 	SetButtonMapping(cust.m_oSendPauseButton, 603,265,91,16, VK_F5, "Pause,Continue");
 	SetButtonMapping(cust.m_oAutoKeySwitchButton, 706,265,91,16, VK_TAB, "Manual,Auto(L/R),Auto(R/L)");
