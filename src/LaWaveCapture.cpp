@@ -368,10 +368,10 @@ int CLaWaveCapture::AnalyzeData()
 			}
 		}
 
-		static int dddd = 100;
-		_ASSERT(dddd != 0 || 0 != s);
-		if (0 < dddd)
-			--dddd;
+		//static int dddd = 100;
+		//_ASSERT(dddd != 0 || 0 != s);
+		//if (0 < dddd)
+		//	--dddd;
 
 		m_nCwState = FALSE;
 		m_pFft->Encode(m_pDctBuff, m_pWavBuff);
